@@ -84,10 +84,9 @@ body {
     --flavour: var(--accent);
     width: 100%;
     height: 100%;
-    right: 100%;
-    background: #fff url("../img/bg-1.gif") repeat left;
-    transition: all .6s;
-    animation: scroll 25s ease-in-out infinite;
+    background: #fff url("../img/bg-1.gif");
+    background-position: center;
+    background-size: auto;
 }
 
 @keyframes scroll {
@@ -96,20 +95,24 @@ body {
     }
 }
 
+#panels ul:nth-child(1) {
+    --flavour: #5b52e4;
+}
+
 #panels ul:nth-child(2) {
-    --flavour: #16a2a2;
+    --flavour: #3a4e93;
 }
 
 #panels ul:nth-child(3) {
-    --flavour: #5b52e4;
+    --flavour: #00e1fd;
 }
 
 #panels ul .links {
     box-shadow: inset -1px 0 var(--flavour);
 }
 
-#panels ul:nth-child(2) { background: #fff url("../img/bg-2.gif") repeat center left fixed; }
-#panels ul:nth-child(3) { background: #fff url("../img/bg-3.gif") repeat center left fixed; }
+#panels ul:nth-child(2) { background: #fff url("../img/bg-2.gif") ; }
+#panels ul:nth-child(3) { background: #fff url("../img/bg-3.gif") ; }
 
 #panels ul[active] {
     right: 0;
@@ -125,7 +128,7 @@ body {
     flex-wrap: wrap;
 }
 
-#panels > ul:first-child .links a {
+#panels > ul .links a {
     color: #bfbfbf;
     text-decoration: none;
     font: 700 18px 'Roboto', sans-serif;
@@ -138,9 +141,9 @@ body {
     margin-bottom: .7em;
 }
 
-#panels > ul:first-child .links a:not(:last-child) { margin-right: .3em }
+#panels > ul .links a { margin-right: .3em }
 
-#panels > ul:first-child .links a:hover {
+#panels > ul .links a:hover {
     transform: scale(1.2);
     box-shadow: 0 0 rgba(0, 0, 0, 0.25), 0 0 0 rgba(0, 0, 0, .5), 0 -4px 5px rgba(0, 0, 0, .1);
     color: #fff;
@@ -160,7 +163,7 @@ body {
     left: calc(15% - 42.5px);
     bottom: 0;
     top: 0;
-    background: linear-gradient(to top, #000000, rgb(191 191 191 / 40%));
+    background: linear-gradient(to top, #000000, rgb(191 191 191 / 0%));
     color: rgb(255 255 255 / 65%);
     letter-spacing: 1px;
     font: 100 30px 'Nunito', sans-serif;
@@ -172,13 +175,13 @@ body {
     backdrop-filter: blur(3px);
 }
 
-#panels > ul:first-child .links li:not(:last-child) {
+#panels > ul .links li {
     box-shadow: 0 1px 0 rgba(255, 255, 255, .07);
     padding: 0 0 .5em 0;
     margin-bottom: 1.5em;
 }
 
-#panels > ul:first-child .links li h1 {
+#panels > ul .links li h1 {
     color: #36363c;
     font-size: 17px;
     margin-bottom: 1em;
@@ -188,30 +191,6 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-#panels > ul:not(:first-child) li {
-    padding: .5em;
-}
-
-#panels > ul:not(:first-child) li a {
-    color: grey;
-    font: 700 16px 'Roboto', sans-serif;
-    text-decoration: none;
-    letter-spacing: 1px;
-}
-
-#panels > ul:not(:first-child) li a:hover {
-    color: #fff;
-}
-
-#panels > ul:not(:first-child) li a:hover::before {
-    display: inline;
-}
-
-#panels > ul:not(:first-child) li a::before {
-    content: '> ';
-    font-weight: 400;
-    display: none;
-}
 
 status-bar {
     position: absolute;
