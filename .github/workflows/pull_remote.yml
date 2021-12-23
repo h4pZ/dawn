@@ -14,5 +14,5 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ secrets.PORT }}
         script: | 
-          cd docker/startpage
+          cd docker/dawn
           git pull
