@@ -6,7 +6,7 @@
 
 <p align="center">
   <img src="https://i.imgur.com/cTT6yNk.png">
-  <a href="https://b-coimbra.github.io/dawn/">LIVE PREVIEW</a>
+  <a href="https://home.h4pz.co/">LIVE PREVIEW</a>
 </div>
 
 ## Keybindings
